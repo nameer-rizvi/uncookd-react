@@ -1,4 +1,4 @@
-[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/9i6y.svg)](https://betteruptime.com/?utm_source=status_badge)
+[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/9i6y.svg)](https://status.uncookd.com)
 
 # uncookd-react
 
