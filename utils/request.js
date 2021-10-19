@@ -69,6 +69,7 @@ export function request({
     };
 
     if (allowAnonymousRequest || store.getState().user.isLoggedIn) {
+      if (config.params) delete config.params.reloaded;
       const { cancelToken } = requestHandler.start();
       axios({ ...sanitized(config), cancelToken })
         .then(requestHandler.success)

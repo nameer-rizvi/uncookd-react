@@ -13,6 +13,8 @@ export * from "./CircleMinus";
 export * from "./Close";
 export * from "./Cog";
 export * from "./Copyright";
+export * from "./Dollar";
+export * from "./DollarBox";
 export * from "./Draft";
 export * from "./Ellipses";
 export * from "./Exclamation";

@@ -1,10 +1,15 @@
 import { cleanAndSafe } from "../../shared";
 import { trimBoundary } from "simpul";
 
-export function markMatches(string, mark, tagName = "mark") {
+export function markMatches(string, mark, tagName = "mark", useParamString) {
   let { isSafeR: isSafeRString, clean: cleanString } = cleanAndSafe(string);
 
   let { isSafeR: isSafeRMark, clean: cleanMark } = cleanAndSafe(mark);
+
+  if (useParamString) {
+    cleanString = string;
+    cleanMark = mark;
+  }
 
   if (isSafeRString && isSafeRMark) {
     const tag = { open: `<${tagName}>`, close: `</${tagName}>` };

@@ -35,7 +35,7 @@ export const FieldInformation = ({ error, name, ...rest }) =>
 export function CharCount({ hide, name, value, ...rest }) {
   const { maxLength } = dictionary.get(name);
   if (!hide && maxLength) {
-    const count = isString(value) ? value.length : 0;
+    const count = (isString(value) ? value.length : 0).toLocaleString();
     const label = [count, maxLength.toLocaleString()].join("/");
     return <StyledSmall {...rest}>{label}</StyledSmall>;
   } else return null;

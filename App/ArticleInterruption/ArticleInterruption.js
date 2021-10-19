@@ -1,12 +1,13 @@
 import React from "react";
 import ArticleInterruptionStyled from "./ArticleInterruptionStyled";
+import ArticleInterruptionContainer from "./ArticleInterruptionContainer";
 import {
   ArticleSectionLeft,
   ArticleSectionMain,
   ArticleHeader,
   ArticleP,
 } from "../Article";
-import { Button, Small } from "../Element";
+import { Small } from "../Element";
 
 const ArticleInterruption = ({
   index = "",
@@ -18,11 +19,11 @@ const ArticleInterruption = ({
   <ArticleInterruptionStyled id={index} className="article-interruption">
     <ArticleSectionLeft svg={svg} />
     <ArticleSectionMain>
-      <Button title={title + " " + description} href={href} initialStyle>
+      <ArticleInterruptionContainer {...{ title, description, href }}>
         <Small>Advertisement.</Small>
         <ArticleHeader>{title}</ArticleHeader>
         <ArticleP>{description}</ArticleP>
-      </Button>
+      </ArticleInterruptionContainer>
     </ArticleSectionMain>
   </ArticleInterruptionStyled>
 );

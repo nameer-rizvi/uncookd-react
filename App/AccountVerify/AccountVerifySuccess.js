@@ -11,12 +11,12 @@ const AccountVerifySuccess = ({ isLoggedIn }) => (
       is_verified
     />
     <P>
-      Thank you for verifying your account. You can now post stories and
+      Thank you for verifying your account. You can now publish stories and post
       comments.
     </P>
     {isLoggedIn ? (
       <ButtonResolver resolve="write">
-        Click here to post your first story.
+        Click here to publish your first story.
       </ButtonResolver>
     ) : (
       <ButtonResolver resolve="login">Click here to login.</ButtonResolver>

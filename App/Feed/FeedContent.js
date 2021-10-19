@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import ContentAccessProvider from "../ContentAccess";
-import { isArrayValid } from "simpul";
+import { isArray } from "simpul";
 import FeedContentPerformance from "./FeedContentPerformance";
 import ArticleList from "../ArticleList";
 import FeedContentNext from "./FeedContentNext";
@@ -24,7 +24,7 @@ const FeedContent = ({
     {Content.FeedContentTop ? (
       <Content.FeedContentTop {...{ ...data, ...rest }} />
     ) : null}
-    {isArrayValid(rows) ? (
+    {isArray(rows) && rows.filter(Boolean).length ? (
       <Fragment>
         <FeedContentPerformance count={count_rows} performance={performance} />
         <ArticleList

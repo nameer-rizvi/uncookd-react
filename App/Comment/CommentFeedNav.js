@@ -53,6 +53,7 @@ function CommentFeedNav({ data, location }) {
       ),
     },
     {
+      ArticleProps: () => ({ svg: "like" }),
       ZeroState: () => (
         <P>Comment {authorName} does not currently have any likes.</P>
       ),

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const InputStyled = styled.input`
   padding: 3px 15px;
-  // height: fit-content;
   width: calc(100%);
   font-size: ${({ theme, $fontSize = "ml" }) => theme.fontSize[$fontSize]};
   font-family: inherit;
@@ -11,6 +10,8 @@ const InputStyled = styled.input`
   background-color: inherit;
   box-sizing: border-box;
   border: none;
+  -webkit-appearance: none;
+  // height: fit-content;
 
   &:invalid + span.validation-status:after {
     position: absolute;

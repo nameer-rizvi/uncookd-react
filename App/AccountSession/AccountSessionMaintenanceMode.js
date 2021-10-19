@@ -12,24 +12,24 @@ const StyledFlexBox = styled(FlexBox)`
   text-align: center;
   line-height: ${({ theme }) => theme.lineHeight[7]};
 
-  h1 {
-    margin-bottom: 60px;
+  h2 {
+    margin: 60px 0 20px 0;
+    line-height: 35px;
   }
 
   h3 {
-    margin-top: 20px;
-  }
-
-  nav {
-    margin-top: 10px;
+    margin: 20px 0 10px 0;
+    line-height: 25px;
   }
 `;
 
 const AccountSessionMaintenanceMode = () => (
   <StyledFlexBox>
     <H1_1>{name.short}</H1_1>
-    <H2_1>Sorry, we're currently under maintenance...</H2_1>
-    <H3_1>But we promise we'll be done soon!</H3_1>
+    <H2_1>We are currently undergoing maintenance.</H2_1>
+    <H3_1>
+      (And we should be done <i>very</i> soon!)
+    </H3_1>
     <H3_1>In the mean time, why not check out our social media:</H3_1>
     <NavSocialMedia />
   </StyledFlexBox>

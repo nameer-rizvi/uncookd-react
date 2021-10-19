@@ -7,7 +7,6 @@ const WriteGet = (props) => (
     componentName="write"
     Component={Write}
     requestProps={{ url: "/draft/initialize" }}
-    persistData
     {...props}
   />
 );

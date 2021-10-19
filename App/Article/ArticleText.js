@@ -9,6 +9,9 @@ export const ArticleHeader = styled(Header)`
     line-height: ${({ theme }) => theme.lineHeight[3]};
     word-break: break-word;
   }
+  svg {
+    width: auto;
+  }
 `;
 
 export const ArticleHeading = styled(H2_1)`

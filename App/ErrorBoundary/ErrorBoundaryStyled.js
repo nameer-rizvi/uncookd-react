@@ -21,6 +21,15 @@ const ErrorBoundaryStyled = styled.div`
     margin: 15px 0;
   }
 
+  &.production-error {
+    max-width: 600px;
+    h2,
+    h3,
+    h4 {
+      font-weight: normal;
+    }
+  }
+
   small {
     display: block;
   }
@@ -28,6 +37,22 @@ const ErrorBoundaryStyled = styled.div`
   pre {
     white-space: pre-wrap;
     word-wrap: break-word;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    outline: solid 1px;
+    width: fit-content;
+    margin: 40px 0;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+    background-color: #0000000d;
   }
 `;
 

@@ -78,6 +78,14 @@ const SVGResolver = {
     props: SVGSize.l,
     Component: SVGIcon.Moon,
   },
+  dollar: {
+    props: SVGSize.l,
+    Component: SVGIcon.Dollar,
+  },
+  dollar_box: {
+    props: SVGSize.xl,
+    Component: SVGIcon.DollarBox,
+  },
   draft: {
     props: SVGSize.l,
     Component: SVGIcon.Draft,

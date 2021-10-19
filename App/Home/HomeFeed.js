@@ -4,7 +4,10 @@ import HomeFeedZeroState from "./HomeFeedZeroState";
 import HomeFeedResponsiveLabels from "./HomeFeedResponsiveLabels";
 import Feed from "../Feed";
 
-function HomeFeed(props) {
+// So as to not have clashing props with requestProps in GetComponent,
+// under Feed, we destructure them out of the passed props here...
+
+function HomeFeed({ error, pending, ...props }) {
   const keys = ["sort", "filter"];
 
   const uls = ["UL_3_WideUnderline", "UL_3_GrayItalic"];

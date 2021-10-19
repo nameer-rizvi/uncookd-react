@@ -21,6 +21,7 @@ function WriteEditor({
 
   const { WriteEditorSaveOnDebounce, WriteEditorSaveButton } = WriteEditorSave({
     saveButton,
+    page,
     setOnSubmitConfig,
     disabled,
   });

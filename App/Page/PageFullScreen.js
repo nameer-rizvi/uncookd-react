@@ -7,12 +7,14 @@ function usePageFullScreen() {
   const updateIsFullscreen = () => setIsFullscreen(screenfull.isFullscreen);
 
   const FullScreenEnter = () =>
+    !isFullscreen &&
     screenfull
       .request()
       .then(updateIsFullscreen)
       .catch(console.error);
 
   const FullScreenExit = () =>
+    isFullscreen &&
     screenfull
       .exit()
       .then(updateIsFullscreen)

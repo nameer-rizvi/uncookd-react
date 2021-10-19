@@ -15,8 +15,12 @@ const ArticleInterruptionStyled = styled(ArticleContainer)`
   }
 
   header {
-    margin: 5px 0 8px;
+    margin: 5px 0 3px;
     font-weight: bold;
+  }
+
+  p {
+    line-height: ${({ theme }) => theme.lineHeight[2]};
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoint[6]}) {

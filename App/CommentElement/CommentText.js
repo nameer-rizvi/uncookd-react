@@ -7,12 +7,17 @@ function CommentText({ comment_text = "", id }) {
   const { username } = useSelector((state) => state.user);
 
   if (comment_text) {
-    let clean_comment_text = (comment_text = comment_text
+    let clean_comment_text = comment_text
       .replace(/ +/g, " ")
-      .replace(/\n\s*\n/g, "\n\n"));
+      .replace(/\n\s*\n/g, "\n\n");
 
     if (username)
-      clean_comment_text = markMatches(clean_comment_text, "@" + username, "b");
+      clean_comment_text = markMatches(
+        clean_comment_text,
+        "@" + username,
+        "b",
+        "useParamString"
+      );
 
     const Content = (
       <P

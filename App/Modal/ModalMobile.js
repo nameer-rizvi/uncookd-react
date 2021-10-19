@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 const ModalMobileStyled = styled.dialog`
   display: none;
-  width: 100%;
   box-sizing: border-box;
   flex-direction: column;
   position: fixed;
   color: inherit;
   height: auto;
   border: unset;
+  left: 0;
+  right: 0;
   top: ${({ theme }) => theme.height.pageNavMobile};
   bottom: ${({ theme }) => theme.height.pageNav};
   z-index: ${({ theme }) => theme.zIndex.mobileHeader};

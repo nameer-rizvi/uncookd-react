@@ -13,7 +13,7 @@ function Page({ Component, ...rest }) {
 
   const { FullScreenExit, FullScreenButton } = usePageFullScreen();
 
-  const { close, CloseButton } = usePageClose({ FullScreenExit });
+  const { close, CloseButton, setOnClose } = usePageClose({ FullScreenExit });
 
   const { setSidebar, setSidebarOnClose, Sidebar } = usePageSidebar();
 
@@ -28,6 +28,7 @@ function Page({ Component, ...rest }) {
     id,
     ref,
     close,
+    setOnClose,
     setSidebar,
     setSidebarOnClose,
     setNavButtons,

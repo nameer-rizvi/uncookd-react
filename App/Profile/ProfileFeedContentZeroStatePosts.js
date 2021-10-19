@@ -9,7 +9,7 @@ function ProfileFeedContentZeroStatePosts({
 }) {
   const plural = filter;
 
-  const singular = numberLabel(1, "filter").label;
+  const singular = numberLabel(1, filter).label;
 
   return subscription === "is_user" && sort === "top" ? (
     <P>
