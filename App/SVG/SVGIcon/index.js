@@ -17,6 +17,7 @@ export * from "./Dollar";
 export * from "./DollarBox";
 export * from "./Draft";
 export * from "./Ellipses";
+export * from "./Error";
 export * from "./Exclamation";
 export * from "./Facebook";
 export * from "./Fire";

@@ -37,12 +37,8 @@ const SitePrivacy = () => (
     <H4_1>Account Information</H4_1>
     <P>
       We collect information you provide under your Account settings. This may
-      include your display name, website, bio, social media handles, and/or
-      account preferences (provided under their respective headings: &quot;show
-      email,&quot; &quot;account privacy,&quot; &quot;autosave drafts,&quot;
-      &quot;backup stories,&quot; &quot;delete account,&quot; &quot;send
-      notification when...,&quot; &quot;change password,&quot; and/or,
-      &quot;feedback&quot;).
+      include your display name, website, bio, social media handles, feedback,
+      and/or your account preferences.
     </P>
     <H4_1>Content</H4_1>
     <P>
@@ -54,14 +50,9 @@ const SitePrivacy = () => (
     <H4_1>Actions</H4_1>
     <P>
       We collect information about the actions you take when using our Service.
-      This includes interactions with Content such as writing stories, saving
+      This may include interactions with Content such as writing stories, saving
       stories, posting stories, deleting stories, bookmarking stories, liking
-      stories, commenting on stories, deleting comments on stories, bookmarking
-      comments on stories, liking comments on stories, replying to comments on
-      stories, subscribing to hashtags, unsubscribing from hashtags, subscribing
-      to users, unsubscribing from users, sending subscription requests to
-      users, canceling subscription requests to users, accepting subscription
-      requests from users, and/or, rejecting subscription requests from users.
+      stories, etc.
     </P>
     <H4_1>Communications</H4_1>
     <ButtonResolver resolve="email_feedback" $display="initial" $underline>

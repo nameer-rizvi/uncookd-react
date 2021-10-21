@@ -40,12 +40,9 @@ function AccountSession({ children = null }) {
     request(requestState);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const inMaintenanceMode =
-    requestState.error && requestState.error.toString().includes("503");
-
   return requestState.pending ? (
     <Loader />
-  ) : inMaintenanceMode ? (
+  ) : requestState.error && requestState.error.toString().includes("503") ? (
     <AccountSessionMaintenanceMode />
   ) : (
     children

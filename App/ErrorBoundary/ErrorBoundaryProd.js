@@ -19,7 +19,7 @@ function ErrorBoundaryProd({ error }) {
       request({
         allowAnonymousRequest: true,
         method: "POST",
-        url: "/app/error",
+        url: "/error",
         data: {
           error: {
             pathname: window.location.pathname + window.location.search,

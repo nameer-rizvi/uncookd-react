@@ -21,7 +21,9 @@ export function useRouteProperties() {
     currentLocationRootPathname === "comment" ||
     (currentLocationRootPathname === "story" &&
       (currentLocationPathname.includes("/comments") ||
-        currentLocationPathname.includes("/likes")));
+        currentLocationPathname.includes("/likes"))) ||
+    (user.isLoggedIn &&
+      currentLocationPathname.includes("/account/notifications"));
 
   return { isPage, hasFeed };
 }

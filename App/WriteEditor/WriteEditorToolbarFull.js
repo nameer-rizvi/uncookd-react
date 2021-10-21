@@ -1,6 +1,6 @@
 import React from "react";
 import { joinAttr } from "../../utils";
-import { Button } from "../Element";
+import { Button, Small } from "../Element";
 import { font } from "../../../shared";
 import { noop } from "simpul";
 import WriteEditorToolbarMessage from "./WriteEditorToolbarMessage";
@@ -64,6 +64,10 @@ const WriteEditorToolbarFull = ({
         </span>
         <WriteEditorToolbarMessage message={message} />
       </section>
+      <Small>
+        * Some fonts may not be supported in certain devices, browsers and/or
+        browser versions.
+      </Small>
     </section>
   </div>
 );

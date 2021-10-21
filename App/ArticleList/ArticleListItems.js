@@ -1,5 +1,6 @@
 import React from "react";
 import ArticleComment from "../ArticleComment";
+import ArticleError from "../ArticleError";
 import ArticleHashtag from "../ArticleHashtag";
 import ArticleInterruption from "../ArticleInterruption";
 import ArticleNotification from "../ArticleNotification";
@@ -22,6 +23,11 @@ function ArticleListItems({ rows, ArticleProps, ...rest }) {
           condition: listItem.content_type === "comment_article",
           index: listItem.content_type + "_" + i,
           Article: ArticleComment,
+        },
+        {
+          condition: listItem.content_type === "error_article",
+          index: listItem.content_type + "_" + i,
+          Article: ArticleError,
         },
         {
           condition: listItem.content_type === "hashtag_article",

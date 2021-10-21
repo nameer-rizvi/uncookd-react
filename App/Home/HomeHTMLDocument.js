@@ -15,7 +15,7 @@ function useHomeHTMLDocument({ isDefault, title, description }, params) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [params]);
+  }, [params.hashtag]);
 }
 
 export default useHomeHTMLDocument;

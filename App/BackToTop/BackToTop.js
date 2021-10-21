@@ -30,7 +30,7 @@ function BackToTop() {
 
     ButtonProps.children = "back to top";
 
-    ButtonProps.onClick = () => window.scrollTo(0, 0);
+    ButtonProps.onClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     return <BackToTopStyled {...ButtonProps} />;
   } else return null;

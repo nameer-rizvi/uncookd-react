@@ -6,4 +6,4 @@ export const fullDate = (date = new Date(), options = {}) =>
     ...options,
   }).format(new Date(date));
 
-export const effectiveDate = fullDate(new Date("9/3/2021"));
+export const effectiveDate = fullDate(new Date("10/19/2021"));

@@ -12,12 +12,12 @@ function CommentText({ comment_text = "", id }) {
       .replace(/\n\s*\n/g, "\n\n");
 
     if (username)
-      clean_comment_text = markMatches(
-        clean_comment_text,
-        "@" + username,
-        "b",
-        "useParamString"
-      );
+      clean_comment_text = markMatches({
+        string: clean_comment_text,
+        mark: "@" + username,
+        tagName: "b",
+        useSanitizedString: true,
+      });
 
     const Content = (
       <P

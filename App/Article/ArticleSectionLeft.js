@@ -12,7 +12,14 @@ const StyledSection = styled(Section)`
   padding-right: ${({ $paddingRight }) => $paddingRight || "24px"};
 `;
 
-const ArticleSectionLeft = ({ label, count, svg, title = "", ...rest }) =>
+const ArticleSectionLeft = ({
+  label,
+  count,
+  svg,
+  title = "",
+  size = "l",
+  ...rest
+}) =>
   label ? (
     <StyledSection className="article-left" {...rest}>
       <H1_2 title={title}>{label}</H1_2>
@@ -23,7 +30,7 @@ const ArticleSectionLeft = ({ label, count, svg, title = "", ...rest }) =>
     </StyledSection>
   ) : svg ? (
     <StyledSection className="article-left" {...rest}>
-      <SVG name={svg} style={SVGSize.l} title={title} />
+      <SVG name={svg} style={SVGSize[size]} title={title} />
     </StyledSection>
   ) : null;
 

@@ -94,6 +94,10 @@ const SVGResolver = {
     props: SVGSize.l,
     Component: SVGIcon.Ellipses,
   },
+  error: {
+    props: SVGSize.l,
+    Component: SVGIcon.ErrorSVG,
+  },
   exclamation: {
     props: SVGSize.xl,
     Component: SVGIcon.Exclamation,

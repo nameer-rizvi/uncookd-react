@@ -8,8 +8,9 @@ function locationHistoryReducer(state = [], action) {
       const newLocation = getNewLocation();
 
       if (support.window("gtag")) {
-        window.gtag("set", "page", newLocation.pathname + newLocation.search);
-        window.gtag("send", "pageview");
+        const page_path = newLocation.pathname + newLocation.search;
+        window.gtag("set", "page_path", page_path);
+        window.gtag("event", "page_view");
       }
 
       return [...state, newLocation];

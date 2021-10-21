@@ -1,4 +1,5 @@
 import RouterConfigAccount from "./RouterConfigAccount";
+import RouterConfigAdmin from "./RouterConfigAdmin";
 import RouterConfigComment from "./RouterConfigComment";
 import RouterConfigDefault from "./RouterConfigDefault";
 import RouterConfigSearch from "./RouterConfigSearch";
@@ -21,6 +22,7 @@ const RouterConfigs = [
   ...RouterConfigWrite,
   ...RouterConfigStory,
   ...RouterConfigComment,
+  ...RouterConfigAdmin,
 ];
 
 function getRouterConfig(pathname, isLoggedIn) {

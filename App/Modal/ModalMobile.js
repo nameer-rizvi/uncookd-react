@@ -9,6 +9,7 @@ const ModalMobileStyled = styled.dialog`
   color: inherit;
   height: auto;
   border: unset;
+  width: 100%;
   left: 0;
   right: 0;
   top: ${({ theme }) => theme.height.pageNavMobile};

@@ -29,8 +29,6 @@ function Router(props) {
     if (redirect) history.push(redirect);
   }, [redirect]);
 
-  // Declare document title and description
-
   useEffect(() => {
     if (!disableHTMLDocumentUpdate) {
       const getMetaData = (metaData) =>
@@ -38,16 +36,9 @@ function Router(props) {
       HTMLDocument.updateTitle(getMetaData(title));
       HTMLDocument.updateDescription(getMetaData(description));
     }
+
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top of new page.
   }, [pathname]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // Scroll to top of new page.
-
-  useEffect(() => {
-    // const element = document.getElementById(elementId.feed);
-    // const top = (element && element.offsetTop) || 0;
-    // window.scrollTo({ top, behavior: "smooth" });
-    window.scrollTo(0, 0);
-  }, [pathname]);
 
   // Integrate params into props.
 

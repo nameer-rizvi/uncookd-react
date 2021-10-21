@@ -32,7 +32,7 @@ const AutosuggestListRows = ({
       const onKeyDown = (e) =>
         AutosuggestOnKeyDown(e, inputId, index, onClick, reset);
 
-      let __html = markMatches(row.label, inputValue);
+      let __html = markMatches({ string: row.label, mark: inputValue });
 
       if (row.caption) __html += ` (${row.caption})`;
 
