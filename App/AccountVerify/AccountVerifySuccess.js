@@ -11,7 +11,7 @@ const AccountVerifySuccess = ({ isLoggedIn }) => (
       is_verified
     />
     <P>
-      Thank you for verifying your account. You can now publish stories and post
+      Thank you for verifying your account. You can now post stories and
       comments.
     </P>
     {isLoggedIn ? (

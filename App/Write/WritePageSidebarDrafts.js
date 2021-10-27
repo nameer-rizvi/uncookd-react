@@ -60,7 +60,7 @@ function WritePageSidebarDrafts({ page }) {
       <ItalicP2>continue working on...</ItalicP2>
       <ArticleList {...ArticleListProps} />
       <ItalicP1>or</ItalicP1>
-      <Button {...CreateButtonProps}>create new story</Button>
+      <Button {...CreateButtonProps}>start new draft</Button>
       <DraftLimitContainer>
         <Small>
           {drafts.length}/{limit.number} drafts in-progress.

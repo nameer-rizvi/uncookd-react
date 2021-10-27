@@ -4,10 +4,10 @@ import Settings from "./Settings";
 
 const SettingsGet = (props) => (
   <GetComponent
-    persistData
     componentName="settings"
     Component={Settings}
     requestProps={{ url: "/user/settings" }}
+    persistData
     {...props}
   />
 );

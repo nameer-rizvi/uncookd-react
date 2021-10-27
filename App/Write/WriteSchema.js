@@ -1,3 +1,4 @@
+import React from "react";
 import WriteEditor from "../WriteEditor";
 import WriteSchemaSubmit from "./WriteSchemaSubmit";
 import AccountVerifiedValidation from "../AccountVerifiedValidation";
@@ -37,7 +38,7 @@ const WriteSchema = ({
     [
       {
         component: "Custom",
-        Component: AccountVerifiedValidation,
+        Component: () => <AccountVerifiedValidation action="publish stories" />,
       },
       {
         component: "Custom",

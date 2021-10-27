@@ -21,9 +21,7 @@ export function getLastLocation(options = {}) {
 
   let href;
 
-  for (let i = locationHistory.length - 1; i >= 0; i--) {
-    let location = locationHistory[i];
-
+  for (let location of locationHistory)
     if (excludeRoots) {
       if (!excludeRoots.includes(location.rootPathname)) {
         href = location.href;
@@ -33,7 +31,6 @@ export function getLastLocation(options = {}) {
       href = location.href;
       break;
     }
-  }
 
   if (href) href = href.split(window.location.origin)[1];
 

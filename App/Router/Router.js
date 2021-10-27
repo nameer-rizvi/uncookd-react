@@ -4,7 +4,6 @@ import RouterConfig from "./RouterConfig";
 import { history } from "../../redux";
 import { isString } from "simpul";
 import { HTMLDocument } from "../../utils";
-// import { elementId } from "../../../shared";
 import Loadable from "../Loadable";
 
 function Router(props) {

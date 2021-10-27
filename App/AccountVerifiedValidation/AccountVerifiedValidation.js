@@ -3,19 +3,10 @@ import AccountVerifiedValidationStyled from "./AccountVerifiedValidationStyled";
 import { P, B, ButtonResolver } from "../Element";
 import { useSelector } from "react-redux";
 
-function AccountVerifiedValidation() {
-  const { user, router } = useSelector((state) => state);
+function AccountVerifiedValidation({ action }) {
+  const { is_verified } = useSelector((state) => state.user);
 
-  const action =
-    router.location.pathname === "/write"
-      ? "publish stories"
-      : router.location.pathname &&
-        router.location.pathname.startsWith("/story")
-      ? "post comments"
-      : router.location.pathname &&
-        router.location.pathname.startsWith("/comment")
-      ? "post replies"
-      : "[TODO:AccountVerifiedValidation.js]";
+  if (!action) console.warn("Missing 'action'.");
 
   const ButtonProps = {
     resolve: "settings_account",
@@ -24,7 +15,7 @@ function AccountVerifiedValidation() {
     $underline: true,
   };
 
-  return !user.is_verified ? (
+  return !is_verified ? (
     <AccountVerifiedValidationStyled>
       <P>
         You must have a <B>verified account</B> in order to {action}. Your

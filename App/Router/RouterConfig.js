@@ -37,14 +37,12 @@ function getRouterConfig(pathname, isLoggedIn) {
     params = URLQuery.get();
     return { ...config, params };
   } else {
-    for (let i = 0; i < RouterConfigs.length; i++) {
-      let RouterConfig = RouterConfigs[i];
+    for (let RouterConfig of RouterConfigs)
       if (RouterConfig.path) {
         let match;
         let pathSplits = splitPath(RouterConfig.path);
-        if (RouterConfig.redirectFroms) {
-          for (let j = 0; j < RouterConfig.redirectFroms.length; j++) {
-            let redirectFrom = RouterConfig.redirectFroms[j];
+        if (RouterConfig.redirectFroms)
+          for (let redirectFrom of RouterConfig.redirectFroms) {
             let redirectFromSplits = splitPath(redirectFrom);
             match = matchPath(pathnameSplits, redirectFromSplits);
             if (match.found) {
@@ -52,7 +50,6 @@ function getRouterConfig(pathname, isLoggedIn) {
               break;
             }
           }
-        }
         match = matchPath(pathnameSplits, pathSplits);
         if (match.found) {
           if (RouterConfig.redirectTo) {
@@ -66,7 +63,6 @@ function getRouterConfig(pathname, isLoggedIn) {
           }
         }
       }
-    }
 
     return redirect || RouterViewAccess(config, isLoggedIn)
       ? { ...config, redirect, params: { ...params, ...URLQuery.get() } }

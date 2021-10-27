@@ -1,3 +1,4 @@
+import { name } from "../../../shared";
 import SettingsAccountVerify from "../SettingsAccountVerify";
 import SettingsAccountDelete from "../SettingsAccountDelete";
 import { onSettingsFormSuccess } from "../../redux";
@@ -14,6 +15,17 @@ const SettingsSchemaAccount = {
       label:
         "Automatically save your in-progress draft everytime you've stopped typing for a second (and taken a breath - phew!).",
       name: "write_autosave",
+    },
+    {
+      component: "H4_2",
+      children: "allow public sharing",
+    },
+    {
+      component: "FormFieldCheckbox",
+      label: `Allow ${
+        name.main
+      } to share your stories on social media (twitter, reddit, etc.).`,
+      name: "is_shareable",
     },
     {
       component: "H4_2",

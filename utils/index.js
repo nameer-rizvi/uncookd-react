@@ -1,6 +1,7 @@
 export * from "./assignId";
 export * from "./fullDate";
 export * from "./getSearchPageMetadata";
+export * from "./gtag";
 export * from "./HTMLDocument";
 export * from "./joinAttr";
 export * from "./markMatches";

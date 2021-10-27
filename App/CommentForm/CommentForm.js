@@ -26,10 +26,16 @@ function CommentForm({
 
     schema.addValues = { story_id, comment_reply_id, comment_level };
 
+    const validationAction = comment_reply_id
+      ? "post replies"
+      : "post comments";
+
     return (
       <CommentFormStyled>
         {ToggleButton}
-        {toggle.state ? <AccountVerifiedValidation /> : null}
+        {toggle.state ? (
+          <AccountVerifiedValidation action={validationAction} />
+        ) : null}
         {toggle.state ? <FormGenerator {...schema} /> : null}
       </CommentFormStyled>
     );

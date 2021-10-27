@@ -13,16 +13,12 @@ export function componentDataUpdateRecursive({
   function handleObject(object) {
     if (_handleObject) _handleObject(object);
     const objectKeys = Object.keys(object);
-    for (let i = objectKeys.length - 1; i >= 0; i--) {
-      handleType(object[objectKeys[i]]);
-    }
+    for (let objectKey of objectKeys) handleType(object[objectKey]);
   }
 
   function handleArray(array) {
     if (_handleArray) array = _handleArray(array);
-    for (let i = array.length - 1; i >= 0; i--) {
-      handleType(array[i]);
-    }
+    for (let item of array) handleType(item);
   }
 
   const handleType = (data) =>

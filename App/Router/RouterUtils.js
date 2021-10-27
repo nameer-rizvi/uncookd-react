@@ -22,10 +22,10 @@ export const splitPath = (path = "") => path.split("/").filter(Boolean);
 export function joinPath(pathSplits = [], tempParams = {}) {
   let path = "";
 
-  for (let i = 0; i < pathSplits.length; i++) {
-    let pathSplit = isParam(pathSplits[i])
-      ? tempParams[makeParamName(pathSplits[i])]
-      : pathSplits[i];
+  for (let pathSplit of pathSplits) {
+    pathSplit = isParam(pathSplit)
+      ? tempParams[makeParamName(pathSplit)]
+      : pathSplit;
     if (pathSplit) {
       path += "/" + pathSplit;
     } else break;
@@ -43,9 +43,7 @@ export function makeRootPath(path, options = {}) {
 
   const pathSplits = splitPath(path);
 
-  for (let i = 0; i < pathSplits.length; i++) {
-    let pathSplit = pathSplits[i];
-
+  for (let pathSplit of pathSplits) {
     let pathSplitIsParam = isParam(pathSplit);
 
     let pathSplitParamName = makeParamName(pathSplit);

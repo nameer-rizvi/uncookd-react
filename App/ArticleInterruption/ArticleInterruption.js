@@ -20,7 +20,7 @@ const ArticleInterruption = ({
     <ArticleSectionLeft svg={svg} />
     <ArticleSectionMain>
       <ArticleInterruptionContainer {...{ title, description, href }}>
-        <Small>Advertisement.</Small>
+        <Small>Pardon the interruption...</Small>
         <ArticleHeader>{title}</ArticleHeader>
         <ArticleP>{description}</ArticleP>
       </ArticleInterruptionContainer>
